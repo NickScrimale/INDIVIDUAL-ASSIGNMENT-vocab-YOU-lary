@@ -1,7 +1,7 @@
 import clearDom from '../helpers/clearDom';
 import renderToDOM from '../helpers/renderToDom';
 
-const addWordForm = (obj = {}) => {
+const addVocabForm = (obj = {}) => {
   clearDom();
   const domString = ` <form id=${
     obj.firebaseKey ? `update-word--${obj.firebaseKey}` : 'submit-word'
@@ -22,7 +22,8 @@ const addWordForm = (obj = {}) => {
         <select class="form-select" id="language">
         <option selected>Open this select menu</option>
         <option value="Javascript">Javascript</option>
-        <option value="HTML/CSS">HTML/CSS</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
         <option value="Python">Python</option>
         </select>
         <label for="floatingSelect">Language/Tech</label>
@@ -34,4 +35,4 @@ const addWordForm = (obj = {}) => {
 
   renderToDOM('#form-container', domString);
 };
-export default addWordForm;
+export default addVocabForm;

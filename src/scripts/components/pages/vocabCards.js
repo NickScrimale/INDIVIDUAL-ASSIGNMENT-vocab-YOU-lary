@@ -14,7 +14,7 @@ const showVocabCards = (array) => {
   renderToDOM('#add-button', btnString);
 
   const filterBtnString = `<button type="button" class="btn btn-primary btn-lg" id="html">HTML</button>
-  <button type="button" class="btn btn-primary btn-lg" id="css">CSS</button>
+    <button type="button" class="btn btn-primary btn-lg" id="css">CSS</button>
     <button type="button" class="btn btn-primary btn-lg" id="javascript">JavaScript</button>
     <button type="button" class="btn btn-primary btn-lg"id="python">Python</button>
     <button type="button" class="btn btn-primary btn-lg"id="all">All</button>`;
