@@ -6,12 +6,12 @@ import clearDom from '../helpers/clearDom';
 
 const domEvents = (uid) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
-    if (e.target.dispatchEvent.includes('add--btn')) {
+    if (e.target.id.includes('add--btn')) {
       addWordForm(uid);
     }
 
-    if (e.target.dispatchEvent.includes('edit-word')) {
-      const [, firebaseKey] = e.target.dispatchEvent.split('--');
+    if (e.target.id.includes('edit-word')) {
+      const [, firebaseKey] = e.target.id.split('--');
       GetSingleVocab(firebaseKey).then((vocabObj) => addWordForm(vocabObj));
     }
 
